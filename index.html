@@ -16,13 +16,16 @@
 					<h3>East CCTV 현황</h3>
 					<ul class="east">
 						<li>예시 CCTV Part 1</li>
-						<select name="demo-east-select1" id="demo-east-select1">
-							<option value="">- East List -</option>
-							<option value="1">예시 CCTV Part 1</option>
-							<option value="1">예시 CCTV Part 2</option>
-							<option value="1">예시 CCTV Part 3</option>
-							<option value="1">예시 CCTV Part 4</option>
-						</select><br></br>
+						<form action="">
+							<select name="demo-east-select1" id="demo-east-select1">
+								<option value="">- East List -</option>
+								<option value="/Users/supark342/Documents/GitHub/jake_transport.github.io/img/penguin.png">예시 CCTV Part 1</option>
+								<option value="1">예시 CCTV Part 2</option>
+								<option value="1">예시 CCTV Part 3</option>
+								<option value="1">예시 CCTV Part 4</option>
+							</select><br></br>
+							<img id="cctv1" src="">
+						</form>
 						<li>예시 CCTV Part 2</li>
 						<select name="demo-east-select2" id="demo-east-select2">
 							<option value="">- East List -</option>
@@ -125,13 +128,22 @@
 						</select><br></br>
 					</ul>
 				</header><hr/>
-
-
-
-
-
-
-			
 		</body>
-
 </html>
+
+
+
+
+<script>
+    let changeimg = document.getElementById("demo-east-select1");
+    let myImg = document.getElementById("cctv1");
+
+    function changeImage(){
+        let index = changeimg.selectedIndex;
+        myImg.src = changeimg.options[index].value;
+    }
+    
+    changeImage();
+    changeimg.onchange = changeImage;
+
+</script>
