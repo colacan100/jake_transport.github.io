@@ -15,41 +15,45 @@
 				<header>
 					<h3>East CCTV 현황</h3>
 					<ul class="east">
+					<form action="">
 						<li>예시 CCTV Part 1</li>
-						<form action="">
 							<select name="demo-east-select1" id="demo-east-select1">
 								<option value="">- East List -</option>
-								<option value="http://cctvsec.ktict.co.kr/149/0qnrMYDJoc47o4q48cUWKBUlbNGCyVrvJGHBaaSqOnFVcfyeYtWFTYJGJ+HmDahb7sUaSrb/e/SKx8TLuewFIg==">예시 CCTV Part 1</option>
+								<option value="http://cctvsec.ktict.co.kr/2793/oAWznJ7I0qKiY3ICyx+BgM3lVBaOrKOCfcori9p1XBI42IVA/BMRAMgr+VW/b/e87rpiEGXQJyCuod18eQptOQ==">예시 CCTV Part 1</option>
 								<option value="1">예시 CCTV Part 2</option>
 								<option value="1">예시 CCTV Part 3</option>
 								<option value="1">예시 CCTV Part 4</option>
 							</select><br></br>
-							<iframe id="cctv1" src='http://cctvsec.ktict.co.kr/149/0qnrMYDJoc47o4q48cUWKBUlbNGCyVrvJGHBaaSqOnFVcfyeYtWFTYJGJ+HmDahb7sUaSrb/e/SKx8TLuewFIg=='></iframe>
-						</form>
+							<iframe id="cctv1" src=''></iframe>
+							
 						<li>예시 CCTV Part 2</li>
-						<select name="demo-east-select2" id="demo-east-select2">
-							<option value="">- East List -</option>
-							<option value="1">예시 CCTV Part 1</option>
-							<option value="1">예시 CCTV Part 2</option>
-							<option value="1">예시 CCTV Part 3</option>
-							<option value="1">예시 CCTV Part 4</option>
-						</select><br></br>
+							<select name="demo-east-select2" id="demo-east-select2">
+								<option value="">- East List -</option>
+								<option value="http://cctvsec.ktict.co.kr/3064/GvNnaFrnECUQka41rmZfNtwd+ZiBPeUG91G0z8gvHfIE5ZaeaJpE93xuBYiWZKx1Jn/51UdLD8BJVaGMrp9Ixg==">예시 CCTV Part 1</option>
+								<option value="1">예시 CCTV Part 2</option>
+								<option value="1">예시 CCTV Part 3</option>
+								<option value="1">예시 CCTV Part 4</option>
+								</select><br></br>
+							<iframe id="cctv2" src=''></iframe>
 						<li>예시 CCTV Part 3</li>
-						<select name="demo-east-select3" id="demo-east-select3">
-							<option value="">- East List -</option>
-							<option value="1">예시 CCTV Part 1</option>
-							<option value="1">예시 CCTV Part 2</option>
-							<option value="1">예시 CCTV Part 3</option>
-							<option value="1">예시 CCTV Part 4</option>
-						</select><br></br>
+							<select name="demo-east-select3" id="demo-east-select3">
+								<option value="">- East List -</option>
+								<option value="http://cctvsec.ktict.co.kr/3075/DqtwUgETr83Iyu+Z2AbfJZgSZ7aE/jmHiF4zPdPgVglyPM9Zub0Zs+0EnuTM38D1UoHtS76ffhYwAvl3ffnfYg==">예시 CCTV Part 1</option>
+								<option value="1">예시 CCTV Part 2</option>
+								<option value="1">예시 CCTV Part 3</option>
+								<option value="1">예시 CCTV Part 4</option>
+								</select><br></br>
+							<iframe id="cctv3" src=''></iframe>
 						<li>예시 CCTV Part 4</li>
-						<select name="demo-east-select4" id="demo-east-select4">
-							<option value="">- East List -</option>
-							<option value="1">예시 CCTV Part 1</option>
-							<option value="1">예시 CCTV Part 2</option>
-							<option value="1">예시 CCTV Part 3</option>
-							<option value="1">예시 CCTV Part 4</option>
-						</select><br></br>
+							<select name="demo-east-select4" id="demo-east-select4">
+								<option value="">- East List -</option>
+								<option value="http://cctvsec.ktict.co.kr/8030/Q0w+nHxzrYkx1vOCzLJXCe6y9WsyC+VuIR+3ijnu58bFsduruokugR5tQvFJTiPP+M4rBy/xfkc+wtWKy1+dMA==">예시 CCTV Part 1</option>
+								<option value="1">예시 CCTV Part 2</option>
+								<option value="1">예시 CCTV Part 3</option>
+								<option value="1">예시 CCTV Part 4</option>
+								</select><br></br>
+							<iframe id="cctv4" src=''></iframe>
+					</form>
 					</ul>
 				</header><hr/>
 			<h2>West</h2>
@@ -132,16 +136,49 @@
 </html>
 
 
+
+
 <script>
-    let changeimg = document.getElementById("demo-east-select1");
-    let myImg = document.getElementById("cctv1");
-
-    function changeImage(){
-        let index = changeimg.selectedIndex;
-        myImg.src = changeimg.options[index].value;
+    let change_id1 = document.getElementById("demo-east-select1");
+	let change_id2 = document.getElementById("demo-east-select2");
+	let change_id3 = document.getElementById("demo-east-select3");
+	let change_id4 = document.getElementById("demo-east-select4");
+    let cctv1 = document.getElementById("cctv1");
+	let cctv2 = document.getElementById("cctv2");
+	let cctv3 = document.getElementById("cctv3");
+	let cctv4 = document.getElementById("cctv4");
+    function changeImage1(){
+        let index = change_id1.selectedIndex;
+        cctv1.src = change_id1.options[index].value;
     }
-    
-    changeImage();
-    changeimg.onchange = changeImage;
+    function changeImage2(){
+        let index = change_id2.selectedIndex;
+        cctv2.src = change_id2.options[index].value;
+    }
+    function changeImage3(){
+        let index = change_id3.selectedIndex;
+        cctv3.src = change_id3.options[index].value;
+    }
+    function changeImage4(){
+        let index = change_id4.selectedIndex;
+        cctv4.src = change_id4.options[index].value;
+    }
+    changeImage1();
+    change_id1.onchange = changeImage1;
+    changeImage2();
+    change_id2.onchange = changeImage2;
+	changeImage3();
+    change_id3.onchange = changeImage3;
+	changeImage4();
+    change_id4.onchange = changeImage4;
 
+
+
+
+
+
+    // let changeimg2 = document.getElementById("demo-east-select2");
+    // let myImg2 = document.getElementById("cctv2");
+    // changeImage(myImg2);
+    // changeimg.onchange = changeImage;
 </script>
